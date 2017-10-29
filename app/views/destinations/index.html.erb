@@ -10,11 +10,11 @@
       <h4><%= destination.name %></h4>
       <p><%= destination.zip %></p>
       <p><%= destination.description %></p>
-      <%= link_to(image_tag(destination.image_url), destination_path(destination)) %>
+      <%= link_to(image_tag(destination.image_url), destination_path(destination), class: "picture") %>
       <div>
         <p><%= link_to 'Show', destination %></p>
         <p><%= link_to 'Edit', edit_destination_path(destination) %></p>
-        <p><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, id: "picture" %></p>
       </div>
     </div>
   <% end %>
